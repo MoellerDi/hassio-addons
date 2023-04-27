@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Smart Appliance Enabler
-version: "1.0.0"
+version: "1.0.1"
 slug: addon-smartapplianceenabler
 description: Smart Appliance Enabler is software for integrating any device (Wallbox, heat pump, washing machine, dishwasher, ...) with Sunny Home Manager by SMA
 url: "https://github.com/MoellerDi/hassio-addons/SmartApplianceEnabler"
