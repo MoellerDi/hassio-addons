@@ -1,4 +1,0 @@
-configuration:
-  sae_www_port:
-    name: SAE WWW Port
-    description: The port of Smart Appliance Enabler configuration portal.
