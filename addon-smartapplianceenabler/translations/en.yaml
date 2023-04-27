@@ -4,4 +4,4 @@ configuration:
     description: The port of Smart Appliance Enabler configuration portal.
   semp_gateway_address:
     name: SEMP Gateway Address
-    description: The Smart Appliance Enabler uses this address to communicate the actual SEMP-URL to the Sunny Home Manager.
+    description: The Smart Appliance Enabler uses this address to communicate the actual SEMP-URL to the Sunny Home Manager. Normally this shiuld be the IP of your HA host.
