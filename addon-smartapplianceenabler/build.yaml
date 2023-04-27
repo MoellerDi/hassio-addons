@@ -1,0 +1,12 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
+build_from:
+  amd64: "avanux/smartapplianceenabler:2.2.2"
+  armv7: "avanux/smartapplianceenabler:2.2.2"
+labels:
+  org.opencontainers.image.title: "Home Assistant Add-on: Smart Appliance Enabler"
+  org.opencontainers.image.description: "The Smart Appliance Enabler is a software for integrating any device (Wallbox, heat pump, washing machine, dishwasher, ...) with the Sunny Home Manager by SMA"
+  org.opencontainers.image.source: "https://github.com/MoellerDi/hassio-addons"
+  org.opencontainers.image.licenses: "GNU GENERAL PUBLIC LICENSE"
+args:
+  BASHIO_VERSION: 0.14.3
+  TEMPIO_VERSION: 2021.09.0
