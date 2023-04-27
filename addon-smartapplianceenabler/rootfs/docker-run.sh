@@ -12,6 +12,9 @@ elif [[ ! -d $SAE_HOME ]]; then
     exit 1
 fi
 
+# disable ipv6
+JAVA_OPTS="${JAVA_OPTS} -Djava.net.preferIPv4Stack=true"
+
 SAE_PORT=$(bashio::config 'sae_www_port')
 JAVA_OPTS="${JAVA_OPTS} -Dserver.port=${SAE_PORT}"
 
