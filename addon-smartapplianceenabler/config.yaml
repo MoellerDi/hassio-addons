@@ -6,7 +6,9 @@ description: Smart Appliance Enabler is software for integrating any device (Wal
 url: "https://github.com/MoellerDi/hassio-addons/SmartApplianceEnabler"
 arch:
   - armv7
+  - aarch64
   - amd64
+  - i386
 init: false
 ingress: false
 ingress_port: 8080

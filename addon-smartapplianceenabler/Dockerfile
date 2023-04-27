@@ -2,6 +2,12 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
+ENV PATH="/usr/bin:${PATH}"
+ENV JAVA_OPTS="-Duser.language=de -Duser.country=DE"
+ENV SAE_INSTALL_DIR=/opt/sae
+ENV SAE_HOME=/opt/sae/data
+ENV SAE_VERSION=2.2.2
+
 # Execute during the build of the image
 ARG \
     BUILD_ARCH \
@@ -29,6 +35,13 @@ RUN \
     \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /usr/src/*
+
+RUN echo "Europe/Berlin" > /etc/timezone
+RUN cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+
+RUN mkdir -p $SAE_INSTALL_DIR \
+    && curl -o $SAE_INSTALL_DIR/logback-spring.xml -L -k https://github.com/camueller/SmartApplianceEnabler/raw/master/run/logback-spring.xml \
+    && curl -o $SAE_INSTALL_DIR/SmartApplianceEnabler-$SAE_VERSION.war -L -k https://github.com/camueller/SmartApplianceEnabler/releases/download/$SAE_VERSION/SmartApplianceEnabler-$SAE_VERSION.war
 
 # Copy root filesystem
 COPY rootfs /

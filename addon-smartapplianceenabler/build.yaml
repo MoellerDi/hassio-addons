@@ -1,7 +1,10 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
 build_from:
-  amd64: "avanux/smartapplianceenabler:2.2.2"
-  armv7: "avanux/smartapplianceenabler:2.2.2"
+  aarch64: "arm64v8/openjdk:11"
+  amd64: "amd64/openjdk:11"
+  #armhf: "armhf/openjdk:11"
+  armv7: "arm32v7/openjdk:11"
+  i386: "i386/openjdk:11"
 labels:
   org.opencontainers.image.title: "Home Assistant Add-on: Smart Appliance Enabler"
   org.opencontainers.image.description: "The Smart Appliance Enabler is a software for integrating any device (Wallbox, heat pump, washing machine, dishwasher, ...) with the Sunny Home Manager by SMA"
