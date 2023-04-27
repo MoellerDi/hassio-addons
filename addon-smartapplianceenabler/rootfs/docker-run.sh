@@ -14,8 +14,10 @@ fi
 
 SAE_PORT=$(bashio::config 'sae_www_port')
 JAVA_OPTS="${JAVA_OPTS} -Dserver.port=${SAE_PORT}"
-bashio::log.info "... JAVA_OPTS = ${JAVA_OPTS}"
 
+JAVA_OPTS="${JAVA_OPTS} -Dsemp.gateway.address=192.168.5.10"
+
+bashio::log.info "... JAVA_OPTS = ${JAVA_OPTS}"
 exec java $JAVA_OPTS \
             -Djava.awt.headless=true \
             -Xmx256m -Dsae.home=$SAE_HOME \
