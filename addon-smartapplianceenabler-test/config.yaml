@@ -26,4 +26,4 @@ schema:
   sae_www_port: "int"
 services:
   - mqtt:need
-image: "ghcr.io/moellerdi/{arch}-addon-smartapplianceenabler"
+image: "ghcr.io/moellerdi/{arch}-addon-smartapplianceenabler-test"
