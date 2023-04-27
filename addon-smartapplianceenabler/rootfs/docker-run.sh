@@ -18,7 +18,9 @@ JAVA_OPTS="${JAVA_OPTS} -Djava.net.preferIPv4Stack=true"
 SAE_PORT=$(bashio::config 'sae_www_port')
 JAVA_OPTS="${JAVA_OPTS} -Dserver.port=${SAE_PORT}"
 
-JAVA_OPTS="${JAVA_OPTS} -Dsemp.gateway.address=192.168.5.10"
+SEMP_GATEWAY_ADDRESS=$(bashio::config 'semp_gateway_address')
+bashio::log.info "... SEMP_GATEWAY_ADDRESS = ${SEMP_GATEWAY_ADDRESS}"
+JAVA_OPTS="${JAVA_OPTS} -Dsemp.gateway.address=${SEMP_GATEWAY_ADDRESS}"
 
 bashio::log.info "... JAVA_OPTS = ${JAVA_OPTS}"
 exec java $JAVA_OPTS \

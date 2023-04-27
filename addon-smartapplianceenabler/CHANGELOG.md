@@ -1,5 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## 1.0.3
+
+- fix semp.gateway.address - can be set ba user; defaults to 192.168.5.10 (for now)
+
 ## 1.0.2
 
 - disable ipv6

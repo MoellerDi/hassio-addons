@@ -2,3 +2,6 @@ configuration:
   sae_www_port:
     name: SAE WWW Port
     description: The port of Smart Appliance Enabler configuration portal.
+  semp_gateway_address:
+    name: SEMP Gateway Address
+    description: The Smart Appliance Enabler uses this address to communicate the actual SEMP-URL to the Sunny Home Manager.
