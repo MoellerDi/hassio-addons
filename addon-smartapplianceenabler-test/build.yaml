@@ -1,8 +1,8 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
 build_from:
-  aarch64: "aarch64/openjdk:11"
+  aarch64: "arm64v8/openjdk:11"
   amd64: "amd64/openjdk:11"
-  armhf: "armhf/openjdk:11"
+  #armhf: "armhf/openjdk:11"
   armv7: "arm32v7/openjdk:11"
   i386: "i386/openjdk:11"
 labels:
